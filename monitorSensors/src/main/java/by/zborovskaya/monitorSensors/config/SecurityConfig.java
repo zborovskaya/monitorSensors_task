@@ -49,7 +49,6 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
                         "/sensors/delete/{id}").hasRole("ADMIN")
                 .antMatchers(AUTH_WHITE_LIST).permitAll()
                 .anyRequest().authenticated()
-//                .anyRequest().permitAll()
                 .and()
                 .sessionManagement()
                 .sessionCreationPolicy(SessionCreationPolicy.STATELESS);

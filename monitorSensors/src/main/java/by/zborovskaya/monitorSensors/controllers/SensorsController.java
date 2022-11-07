@@ -117,7 +117,7 @@ public class SensorsController {
 
     @GetMapping("/searchByTitle")
     public List<SensorDTOGet> findByName(@RequestParam("title") @ApiParam(defaultValue = "barometer")String title) {
-        return sensorsRepository.findByName(title)
+        return sensorsRepository.findByName(title.trim())
                 .stream()
                 .map(s->(convertToSensor(s)))
                 .collect(Collectors.toList());
@@ -126,7 +126,7 @@ public class SensorsController {
 
     @GetMapping("/searchByModel")
     public List<SensorDTOGet> findByModel(@RequestParam("model") @ApiParam(defaultValue = "ac-23")String model) {
-        return sensorsRepository.findByModel(model)
+        return sensorsRepository.findByModel(model.trim())
                 .stream()
                 .map(s->(convertToSensor(s)))
                 .collect(Collectors.toList());
