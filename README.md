@@ -1,5 +1,5 @@
 # monitorSensors_task
-Запуск программы 
+Запуск программы:
 Склонируйте репозиторий(git clone <url>).
 Создайте базу данных в postgreSql с названием sensors_db (create database sensors_db).
 В папке monitorSensors/sql находится sql скрипт для создания начальной структуры БД и инициализации данных. Запустите данный скрипт.
